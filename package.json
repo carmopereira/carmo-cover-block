@@ -1,0 +1,31 @@
+{
+	"name": "carmo-cover-block",
+	"version": "0.2.0",
+	"description": "Extends the core Cover block with ACF background images (desktop/mobile).",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"prebuild": "npm version patch --no-git-tag-version && node scripts/sync-version.js",
+		"updateGIT": "node scripts/update-git.js",
+		"symlink": "node scripts/create-symlink.js"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "latest",
+		"@wordpress/components": "latest",
+		"@wordpress/compose": "latest",
+		"@wordpress/data": "latest",
+		"@wordpress/hooks": "latest",
+		"@wordpress/i18n": "latest"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^31.4.0"
+	}
+}
