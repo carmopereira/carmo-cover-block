@@ -124,7 +124,13 @@ function carmo_cover_block_render_cover( string $block_content, array $block ): 
 	if ( ! empty( $desktop_image_url ) ) {
 		$existing_style = $processor->get_attribute( 'style' ) ?? '';
 		$bg_style       = sprintf( 'background-image: url(%s);', esc_url( $desktop_image_url ) );
-		$new_style      = ! empty( $existing_style ) ? $existing_style . ' ' . $bg_style : $bg_style;
+
+		if ( ! empty( $existing_style ) ) {
+			$existing_style = rtrim( $existing_style, '; ' ) . ';';
+			$new_style      = $existing_style . ' ' . $bg_style;
+		} else {
+			$new_style = $bg_style;
+		}
 
 		$processor->set_attribute( 'style', $new_style );
 	}
