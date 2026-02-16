@@ -6,7 +6,7 @@ import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 
 /**
- * Add ACF background attributes to core/cover block.
+ * Add ACF background attribute to core/cover block.
  */
 addFilter(
 	'blocks.registerBlockType',
@@ -24,17 +24,13 @@ addFilter(
 					type: 'string',
 					default: '',
 				},
-				acfMobileFieldKey: {
-					type: 'string',
-					default: '',
-				},
 			},
 		};
 	}
 );
 
 /**
- * Add ACF Background Images panel to core/cover InspectorControls.
+ * Add ACF Background Image panel to core/cover InspectorControls.
  */
 const withACFControls = createHigherOrderComponent( ( BlockEdit ) => {
 	return ( props ) => {
@@ -90,14 +86,14 @@ const withACFControls = createHigherOrderComponent( ( BlockEdit ) => {
 				<InspectorControls>
 					<PanelBody
 						title={ __(
-							'ACF Background Images',
+							'ACF Background Image',
 							'carmo-cover-block'
 						) }
 						initialOpen={ false }
 					>
 						<TextControl
 							label={ __(
-								'Desktop ACF Field Key',
+								'ACF Field Key',
 								'carmo-cover-block'
 							) }
 							value={ attributes.acfDesktopFieldKey }
@@ -107,30 +103,14 @@ const withACFControls = createHigherOrderComponent( ( BlockEdit ) => {
 								} )
 							}
 							help={ __(
-								'Enter the ACF field key for desktop background (e.g., field_63a1b2c3d4e5f).',
-								'carmo-cover-block'
-							) }
-						/>
-						<TextControl
-							label={ __(
-								'Mobile ACF Field Key',
-								'carmo-cover-block'
-							) }
-							value={ attributes.acfMobileFieldKey }
-							onChange={ ( value ) =>
-								setAttributes( {
-									acfMobileFieldKey: value,
-								} )
-							}
-							help={ __(
-								'Optional. ACF field key for mobile background. If empty, desktop image is used on all devices.',
+								'Enter the ACF field key for background image (e.g., field_63a1b2c3d4e5f).',
 								'carmo-cover-block'
 							) }
 						/>
 						{ desktopImageUrl && (
 							<p style={ { fontStyle: 'italic' } }>
 								{ __(
-									'ACF desktop image detected.',
+									'ACF image detected.',
 									'carmo-cover-block'
 								) }
 							</p>

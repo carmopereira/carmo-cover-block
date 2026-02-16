@@ -1,6 +1,6 @@
 {
 	"name": "carmo-cover-block",
-	"version": "0.2.0",
+	"version": "0.2.6",
 	"description": "Extends the core Cover block with ACF background images (desktop/mobile).",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",

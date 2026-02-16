@@ -77,10 +77,8 @@
 - Use WC CRUD classes
 - Check WC activation before use
 
-## Build Process
-- Development: `npm run start`
-- Production: `npm run build`
-- Enqueue built files only
+## Always do
+- run "npm run build" at the end of every final output
 
 ## What NOT to Do
 - ❌ Direct `$_POST`/`$_GET` without sanitization
