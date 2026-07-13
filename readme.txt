@@ -1,8 +1,8 @@
 === Carmo Cover Block ===
 Contributors:      The WordPress Contributors
 Tags:              block
-Tested up to:      6.8
-Stable tag:        0.1.0
+Tested up to:      6.9
+Stable tag:        0.2.6
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 2. This is the second screen shot
 
 == Changelog ==
+
+= 0.2.6 =
+* Extend core/cover with ACF background support instead of a custom block
+* Inject desktop ACF background via media query, mobile support removed
 
 = 0.1.0 =
 * Release

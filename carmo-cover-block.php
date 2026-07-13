@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * Plugin Name:       Carmo Cover Block
  * Description:       Extends the core Cover block with ACF background images.
- * Version:           0.2.6
+ * Version:           0.2.7
  * Requires at least: 6.9
  * Requires PHP:      8.2
  * Author:            The WordPress Contributors
