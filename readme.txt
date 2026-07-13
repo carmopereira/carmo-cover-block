@@ -1,49 +1,46 @@
 === Carmo Cover Block ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.9
-Stable tag:        0.2.6
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Contributors: carmopereira
+Donate link: https://ko-fi.com/carmopereira
+Tags: cover, block, background, acf
+Requires at least: 6.9
+Tested up to: 7.0.1
+Stable tag: 0.2.8
+Requires PHP: 8.2
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+Extends the core Cover block with an ACF background image that replaces the block's background on desktop screens.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+This plugin extends the core Gutenberg Cover block, adding an Advanced Custom Fields (ACF) image field control in the editor. When a field is selected, its image is injected as the Cover block's background on desktop screens (min-width: 768px) via a scoped media query, leaving the block's own background untouched on smaller screens.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Requires Advanced Custom Fields to be installed and active.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Upload the plugin files to the `/wp-content/plugins/carmo-cover-block` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Make sure Advanced Custom Fields is installed and active.
+4. Edit a Cover block and select the ACF image field to use as its desktop background.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Does this affect all blocks? =
 
-An answer to that question.
+No. It only affects blocks of type core/cover.
 
-= What about foo bar? =
+= Do I need Advanced Custom Fields installed? =
 
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+Yes. The plugin relies on ACF's `get_field()` to retrieve the background image, and does nothing if ACF is not active.
 
 == Changelog ==
+
+= 0.2.8 =
+* Set plugin author
+
+= 0.2.7 =
+* Update Tested up to and Stable tag
 
 = 0.2.6 =
 * Extend core/cover with ACF background support instead of a custom block
@@ -51,9 +48,3 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 0.1.0 =
 * Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
