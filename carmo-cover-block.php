@@ -1,23 +1,24 @@
 <?php
-declare(strict_types=1);
-
 /**
  * Plugin Name:       Carmo Cover Block
+ * Plugin URI:        https://github.com/carmopereira/carmo-cover-block
  * Description:       Extends the core Cover block with ACF background images.
- * Version:           0.2.10
+ * Version:           0.2.12
  * Requires at least: 6.9
  * Requires PHP:      8.2
- * Author:            carmopereira
- * License:           GPL-2.0-or-later
+ * Author:            João Carmo Pereira
+ * Author URI:        https://profiles.wordpress.org/carmopereira/
+ * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       carmo-cover-block
+ * Domain Path:       /languages
  *
  * @package CarmoCoverBlock
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+declare(strict_types=1);
+
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Enqueue editor script that adds ACF controls to core/cover.

@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/carmopereira
 Tags: cover, block, background, acf
 Requires at least: 6.9
 Tested up to: 7.0.1
-Stable tag: 0.2.8
+Stable tag: 0.2.12
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,9 @@ No. It only affects blocks of type core/cover.
 Yes. The plugin relies on ACF's `get_field()` to retrieve the background image, and does nothing if ACF is not active.
 
 == Changelog ==
+
+= 0.2.12 =
+* Complete plugin header: Plugin URI, Author URI, Domain Path, license name
 
 = 0.2.8 =
 * Set plugin author
